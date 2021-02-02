@@ -57,7 +57,7 @@ function onClickL () {
     /* get a parent node */
     const root = document.querySelector('ul.container');
     /* swapping nodes */
-    swapOrder(root);
+    swapOrderBack(root);
     /* get a first and a last elemes */
     const first = root.querySelector('.first');
     /* pElem.appendChild(first); */
@@ -112,6 +112,40 @@ function swapOrder (pElem) {
   const subArray = Array.prototype.slice.call(nodeList);
   subArray.forEach(swp);
 }
+
+
+/*****************/
+function swapOrderBack (pElem) {
+  /** additional swap function */
+  /* first - on the bottom */
+  /* fourth - on the top */
+  function swp (val) {
+    switch (val.getAttribute('class')) {
+      case 'first':
+        val.setAttribute('class', 'forth');
+        break;
+      case 'second':
+        val.setAttribute('class', 'first');
+        break;
+      case 'thrid':
+        val.setAttribute('class', 'second');
+        break;
+      case 'forth':
+        val.setAttribute('class', 'thrid');
+        break;
+      default:
+    }
+    /* clear inline style */
+    val.style.transform = '';
+  }
+
+  /*********************/
+  /* get children */
+  const nodeList = pElem.children;
+  const subArray = Array.prototype.slice.call(nodeList);
+  subArray.forEach(swp);
+}
+
 
 function onTransitionEnd (evt) {
   const targetNode = evt.currentTarget;
