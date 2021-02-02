@@ -4,6 +4,7 @@
 
 body{ 
  margin: 18px;
+ overflow-x: hidden;
 }
 
 ul.container{
@@ -160,6 +161,39 @@ ul.listOfPuncts>li{
     font-style: oblique;
 }
 
+
+section.clearBtn{
+    opacity:0.4;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    position:absolute;
+    top:10vh;
+    width: 95vw;
+    left: 2.5vw;
+    
+}
+
+section.clearBtn>div:nth-child(2){
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 25px;
+    border-color: transparent transparent transparent #ff5000;
+}
+
+section.clearBtn>div:nth-child(1){
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 25px 0;
+    border-color: transparent #ff5000 transparent transparent;
+}
 
 
 @media screen and (min-width:726px) {
