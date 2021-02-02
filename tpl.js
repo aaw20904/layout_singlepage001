@@ -61,7 +61,7 @@ function onClickL () {
     /* get a first and a last elemes */
     const first = root.querySelector('.first');
     /* pElem.appendChild(first); */
-    first.style.transform = 'translateX(-95vw)';
+    first.style.transform = 'translateX(-90vw)';
     first.style.marginTop = '';
   }
 }
@@ -78,7 +78,7 @@ function onClickR () {
     /* get a first and a last elemes */
     const first = root.querySelector('.first');
     /* pElem.appendChild(first); */
-    first.style.transform = 'translateX(95vw)';
+    first.style.transform = 'translateX(90vw)';
   }
 }
 
